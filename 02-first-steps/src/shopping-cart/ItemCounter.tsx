@@ -5,13 +5,13 @@ import "./ItemCounter.css";
 import styles from './ItemCounter.module.css';
 interface Props {
     productName: string;
-    quantity: number | undefined;
+    quantity?: number | undefined;
 }
 
 
 export const ItemCounter = ({ productName, quantity = 1 }: Props) => {
 
-    const [count, setCount] = useState(10);
+    const [count, setCount] = useState<number>(quantity);
 
     const handleAdd = () => {
 
